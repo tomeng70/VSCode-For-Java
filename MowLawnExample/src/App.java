@@ -4,6 +4,8 @@ import java.util.Random;
 
 
 public class App {
+    static public final int DISPLAY_PERIOD = 250;
+    
     public class Mower {
         public int x;
         public int y;
@@ -183,32 +185,28 @@ public class App {
     }
 
     public boolean updateMower() {
-        char val = mower.checkInFront();
-        if (val == '+') {
-            // there's grass in front.
-            mower.moveForward();
-            cutGrass();
+        if (mower.checkInFront() == '+') {
+            return true;
         } else {
             // turn to the right
             mower.turnRight();
-            val = mower.checkInFront();
-            if (val == '+') {
+            if (mower.checkInFront() == '+') {
                 // more grass.
                 return true;
             } else {
                 // check to the left of original direction.
                 mower.turnLeft();
                 mower.turnLeft();
-                val = mower.checkInFront();
-
-                if (val == '+') {
+                if (mower.checkInFront() == '+') {
                     return true;
                 } else {
-                    
+                    // turn left one more time.
+                    mower.turnLeft();
+                    if (mower.checkInFront() == '+') {
+                        return true;
+                    } 
                 }
-
             }
-            
         }
 
         return false;
@@ -236,16 +234,19 @@ public class App {
         while (keepLooping) {
             // clear screen.
             myApp.clearScreen();
-            Thread.sleep(50);
            
             // print yard.
             myApp.printYard();
 
+            // pause a moment.
+            Thread.sleep(DISPLAY_PERIOD);
+
             // try and updat position of mower.
             keepLooping = myApp.updateMower();
-
-            // pause a moment.
-            Thread.sleep(2000);
+            if (keepLooping) {
+                myApp.mower.moveForward();
+                myApp.cutGrass();
+            }
         }
 
     }
