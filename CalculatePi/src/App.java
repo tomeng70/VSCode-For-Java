@@ -1,6 +1,14 @@
 public class App {
+    // we want to solve for Pi to 6 significant digits.  
+    // If we set our threshold to 1E-7 then our value of Pi
+    // (which is 4 * our calculated value of the series) 
+    // should be accurate to 1E-6.
     static final double THRESHOLD = 0.0000001;
-    static boolean DEBUG = false;
+
+    // set the following constant to true if you want to display debug statements.
+    // note it will take a very, very long time to calculat Pi if you display the
+    // debug statements.
+    static final boolean DEBUG = false;
 
     public static void main(String[] args) throws Exception {
         // initialize variables.
@@ -27,18 +35,18 @@ public class App {
                     previousVal, currentVal, error));
             }
             
-            // toggle the sign.
+            // toggle the sign so we'll alternate between subtraction and addition.
             sign = -1 * sign;
 
             // increase the index by two (we only want the odd numbers).
             index = index + 2;
         }
         
+        // calculate Pi.
         double pi = currentVal * 4;
+
+        // display formatted output.
         System.out.println(String.format("  index = %04d, prev = %.08f, curr = %.08f, err = %.08f", index, previousVal, currentVal, error));
         System.out.println(String.format("  Pi = %.08f", pi));
-
-    
-
     }
 }
