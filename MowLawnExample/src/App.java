@@ -20,9 +20,8 @@ public class App {
             x = 1;
             y = 1;
             dir = 0;
-
             this.yard = yard;
-
+            
             random = new Random();
         }
 
