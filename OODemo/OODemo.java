@@ -30,7 +30,9 @@ class Bicycle {
     }
 
     public void brake() {
-        speed = speed - 1;
+        if (speed > 1.0) {
+            speed = speed - 1;
+        }   
     }
 }
 
@@ -49,6 +51,5 @@ public class OODemo {
             System.out.printf("gear = %d, speed = %.2f%n", bike.getGear(), bike.getSpeed());
             bike.shiftUp();
         }
-
     }
 }
