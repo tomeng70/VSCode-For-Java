@@ -40,7 +40,6 @@ class FixedGearBicycle implements Bicycle {
     }
 }
 
-
 public class InterfaceDemo {
     public static void main(String[] args) {
         // create an object using the Bicycle class.
@@ -56,6 +55,5 @@ public class InterfaceDemo {
             System.out.printf("gear = %d, speed = %.2f%n", bike.getGear(), bike.getSpeed());
             bike.shiftUp();
         }
-
     }
 }
