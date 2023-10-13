@@ -7,6 +7,7 @@ public class Cookies {
         double cookies = input.nextDouble();
         final double COST = .99;
 
+        // make totalCost a variable that visible in the main method (not just in an if or else clause).
         double totalCost = 0;
         if (cookies >= 24){
             //double totalCost = (cookies * COST) * .85;
@@ -21,11 +22,12 @@ public class Cookies {
             totalCost = (cookies * COST) * .975;
             //System.out.printf("Total cost: $%.2f%n", totalCost);
         } else {
+            // don't forget the case when they have < 6 cookies.
             // no discount.
             totalCost = cookies * COST;
         }
 
-        // print the total cost.
+        // print the total cost here to be more efficient.
         System.out.printf("Total cost: $%.2f%n", totalCost);
     
 
