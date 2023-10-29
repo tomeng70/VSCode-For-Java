@@ -11,7 +11,12 @@
  * Test with 13 cookies.    Total should be $12.23
  * Test with 25 cookies.    Total should be $21.04
  * 
- * There are 3 issues with this program.  
+ * There are issues with this program.  
+ * Some are compile-time issues that will
+ * prevent the program from compiling.
+ * Other issues are logic errors that will
+ * produce the wrong results.
+ * 
  * Use your debugging techniques and tools
  * to find and correct these issues.
  */
