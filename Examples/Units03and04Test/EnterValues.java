@@ -57,8 +57,5 @@ public class EnterValues {
         System.out.println("max = " + max);
         System.out.println("count = " + count);
         System.out.printf("avg = %.2f%n", (total / count));       
-    }
-    
-
-    
+    }    
 }
