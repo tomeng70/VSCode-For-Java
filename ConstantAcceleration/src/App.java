@@ -47,6 +47,7 @@ public class App {
         // use doubles to avoid integer division.
         double h = h0 + v0 * t + 1.0 / 2.0 * GRAVITY * t * t;
 
+        // display original input and the calculated result.
         System.out.println("h0 = " + h0 + " m.");
         System.out.println("v0 = " + v0 + " m/s.");
         System.out.println("t  = " + t + " s.");
