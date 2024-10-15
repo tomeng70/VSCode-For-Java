@@ -6,20 +6,20 @@ Explain whether the following statements invoke static or instance methods:
 
 1. char c = name.charAt(0);
 
-ANSWER: The method, charAt() is an instance method.  It is called or invoked 
-by an instance of the String class.
+  ANSWER: The method, charAt() is an instance method.  It is called or invoked 
+  by an instance of the String class.
 
-String answer = String.valueOf(Math.PI / 2.0);
+2. String answer = String.valueOf(Math.PI / 2.0);
 
-ANSWER: The method, valueOf(), is a static method.  It is called or invoked 
-by the String class.
+  ANSWER: The method, valueOf(), is a static method.  It is called or invoked 
+  by the String class.
 
-String msg = String.format("PI = %.5f", Math.PI);
+3. String msg = String.format("PI = %.5f", Math.PI);
 
-ANSWER: The method, format(), is a static method.  It is called or invoked
-by the String class.
+  ANSWER: The method, format(), is a static method.  It is called or invoked
+  by the String class.
 
-int length = phrase.length(); 
+4. int length = phrase.length(); 
 
-ANSWER: The method, length(), is an instance method.  It is called or invoked
-by an instance of the String class.
+  ANSWER: The method, length(), is an instance method.  It is called or invoked
+  by an instance of the String class.
